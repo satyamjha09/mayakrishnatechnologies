@@ -1,0 +1,26 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="awtsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1557B0"/><stop offset="1" stop-color="#3E8EDE"/></linearGradient>
+<linearGradient id="awtscr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAF3FF"/><stop offset="1" stop-color="#CFE2F8"/></linearGradient>
+</defs>
+<rect width="400" height="200" fill="url(#awtsky)"/>
+<circle cx="60" cy="40" r="3" fill="#fff" opacity=".35"/><circle cx="340" cy="30" r="2.4" fill="#fff" opacity=".3"/><circle cx="300" cy="60" r="2" fill="#fff" opacity=".25"/>
+<g opacity=".95">
+<path d="M110 92c0-20 16-36 36-36 6 0 12 2 17 4 7-12 20-20 34-20 22 0 39 17 39 39l0 1c14 2 25 14 25 28 0 16-13 28-28 28H124c-16 0-28-13-28-28 0-13 9-24 21-27z" fill="#fff"/>
+<path d="M262 108c11 0 20-9 20-20 0-2 0-3-1-5 8 4 14 12 14 22 0 6-2 11-6 15h-27z" fill="#E3EEFC"/>
+</g>
+<g transform="translate(148,88)">
+<rect x="0" y="0" width="104" height="62" rx="6" fill="#0F2A5C"/>
+<rect x="6" y="6" width="92" height="50" rx="3" fill="url(#awtscr)"/>
+<rect x="14" y="14" width="40" height="5" rx="2.5" fill="#1557B0"/>
+<rect x="14" y="24" width="66" height="4" rx="2" fill="#8FB6E4"/>
+<rect x="14" y="32" width="58" height="4" rx="2" fill="#8FB6E4"/>
+<rect x="14" y="40" width="30" height="8" rx="3" fill="#F5A623"/>
+<rect x="-10" y="62" width="124" height="8" rx="4" fill="#081226"/>
+</g>
+<g stroke="#F5A623" stroke-width="4" stroke-linecap="round" fill="none">
+<path d="M116 70 v-22 m0 0 l-8 9 m8-9 l8 9"/>
+<path d="M290 96 v22 m0 0 l-8-9 m8 9 l8-9"/>
+</g>
+<text x="200" y="188" font-family="Plus Jakarta Sans,Arial,sans-serif" font-weight="700" font-size="13" fill="#DCEBFF" text-anchor="middle" letter-spacing="3">TALLY ON CLOUD</text>
+</svg>

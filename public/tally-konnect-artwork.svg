@@ -1,0 +1,33 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="tkbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0F2A5C"/><stop offset="1" stop-color="#1557B0"/></linearGradient>
+</defs>
+<rect width="400" height="200" fill="url(#tkbg)"/>
+<g opacity=".14" stroke="#fff" stroke-width="1">
+<path d="M0 50h400M0 100h400M0 150h400M80 0v200M160 0v200M240 0v200M320 0v200" fill="none"/>
+</g>
+<path d="M92 100 C 150 60, 250 140, 308 100" stroke="#F5A623" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="1 14"/>
+<path d="M92 100 C 150 60, 250 140, 308 100" stroke="#3E8EDE" stroke-width="2" fill="none" opacity=".6"/>
+<g transform="translate(52,72)">
+<rect x="0" y="0" width="80" height="50" rx="6" fill="#fff"/>
+<rect x="6" y="6" width="68" height="38" rx="3" fill="#DFEBFA"/>
+<rect x="12" y="12" width="34" height="4" rx="2" fill="#1557B0"/>
+<rect x="12" y="20" width="52" height="3.4" rx="1.7" fill="#8FB6E4"/>
+<rect x="12" y="27" width="44" height="3.4" rx="1.7" fill="#8FB6E4"/>
+<rect x="30" y="50" width="20" height="10" rx="2" fill="#CBD9EC"/>
+</g>
+<g transform="translate(288,66)">
+<rect x="0" y="0" width="42" height="72" rx="8" fill="#fff"/>
+<rect x="4" y="8" width="34" height="52" rx="3" fill="#DFEBFA"/>
+<rect x="9" y="14" width="18" height="3.4" rx="1.7" fill="#1557B0"/>
+<rect x="9" y="21" width="24" height="3" rx="1.5" fill="#8FB6E4"/>
+<rect x="9" y="27" width="20" height="3" rx="1.5" fill="#8FB6E4"/>
+<circle cx="21" cy="66" r="3" fill="#CBD9EC"/>
+</g>
+<g transform="translate(200,100)">
+<circle r="24" fill="#F5A623"/>
+<path d="M0 -11 v11" stroke="#0F2A5C" stroke-width="4" stroke-linecap="round"/>
+<path d="M-8.5 -7 a12 12 0 1 0 17 0" stroke="#0F2A5C" stroke-width="4" fill="none" stroke-linecap="round"/>
+</g>
+<text x="200" y="188" font-family="Plus Jakarta Sans,Arial,sans-serif" font-weight="700" font-size="13" fill="#CFE0F5" text-anchor="middle" letter-spacing="3">KONNECT EVERYTHING</text>
+</svg>
