@@ -51,11 +51,6 @@ const focusAreas = [
   },
   {
     number: "02",
-    title: "AI workflows",
-    text: "Convert documents and repetitive business data into useful action.",
-  },
-  {
-    number: "03",
     title: "Customer automation",
     text: "Build faster conversations and scalable WhatsApp experiences.",
   },
@@ -283,11 +278,6 @@ export function MayakrishnaLanding() {
               >
                 Send enquiry
               </button>
-
-              <p className="text-xs leading-5 text-[#68758B]">
-                Connect this form to your email service or API endpoint before
-                publishing.
-              </p>
             </form>
           </div>
         </section>
