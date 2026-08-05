@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mayakrishna Technologies — Coming Soon",
+  title: "Mayakrishna Technologies | Tally Automations",
   description:
-    "Mayakrishna Technologies — automating business around Tally. AnywhereTally, TallyKonnect, MayaLabs.ai and Metawhat.",
+    "Simplify daily accounting and business tasks with Tally on mobile, real-time connectivity, document automation and smarter customer communication.",
 };
 
 export default function RootLayout({

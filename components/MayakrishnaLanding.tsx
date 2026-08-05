@@ -10,7 +10,7 @@ const products = [
     domain: "anywheretally.com",
     href: "https://anywheretally.com",
     description:
-      "Tally on Cloud — run TallyPrime from anywhere, anytime, on any device. Secure hosting, daily backups and 24×7 access for your whole team.",
+      "Tally on Cloud run TallyPrime from anywhere, anytime, on any device. Secure hosting, daily backups and 24×7 access for your whole team.",
     logo: "/anywhere-tally-logo.png",
     artwork: "/anywhere-tally-artwork.svg",
   },
@@ -19,7 +19,7 @@ const products = [
     domain: "tallykonnect.com",
     href: "https://tallykonnect.com",
     description:
-      "Power up your Tally connectivity — link branches, remote teams and data so everyone works on one Tally, in real time, from wherever they are.",
+      "Power up your Tally connectivity link branches, remote teams and data so everyone works on one Tally, in real time, from wherever they are.",
     logo: "/tally-konnect-logo.png",
     artwork: "/tally-konnect-artwork.svg",
   },
@@ -28,7 +28,7 @@ const products = [
     domain: "mayalabs.ai",
     href: "https://mayalabs.ai",
     description:
-      "AI for your paperwork — turn bills, documents and raw business data into structured entries, insights and action, automatically.",
+      "AI for your paperwork turn bills, documents and raw business data into structured entries, insights and action, automatically.",
     logo: "/maya-labs-logo.png",
     artwork: "/maya-labs-artwork.svg",
   },
@@ -37,7 +37,7 @@ const products = [
     domain: "metawhat.in",
     href: "https://metawhat.in",
     description:
-      "WhatsApp automation for business — broadcasts, chatbots and customer conversations at scale, straight from the tools you already use.",
+      "WhatsApp automation for business broadcasts, chatbots and customer conversations at scale, straight from the tools you already use.",
     logo: "/metawhat-logo.png",
     artwork: "/metawhat-artwork.svg",
   },
@@ -105,6 +105,7 @@ export function MayakrishnaLanding() {
   const [revealed, setRevealed] = useState(false);
   const [isSendingContact, setIsSendingContact] = useState(false);
   const [contactStatus, setContactStatus] = useState<ContactStatus>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const handleReveal = useCallback(() => setRevealed(true), []);
 
   const handleContactSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -169,12 +170,14 @@ export function MayakrishnaLanding() {
           revealed ? "is-revealed" : ""
         }`}
       >
-        <header className="reveal-navbar sticky top-0 z-40 border-b border-navy/10 bg-white/90 text-navy shadow-[0_8px_30px_rgba(15,42,92,0.06)] backdrop-blur-xl">
-          <nav className="mx-auto flex h-[84px] max-w-[1180px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+        <header className="reveal-navbar sticky top-0 z-40 border-b border-navy/10 bg-white/95 text-navy shadow-[0_8px_30px_rgba(15,42,92,0.06)] backdrop-blur-xl">
+          <nav className="mx-auto flex h-[76px] max-w-[1180px] items-center justify-between gap-3 px-4 sm:h-[84px] sm:px-6 lg:px-8">
+            {/* LOGO */}
             <a
               href="#top"
               aria-label="Mayakrishna Technologies home"
-              className="group flex min-w-0 items-center gap-3.5"
+              onClick={() => setMobileMenuOpen(false)}
+              className="group flex min-w-0 items-center gap-2.5 sm:gap-3.5"
             >
               <Image
                 src="/mayakrishna-logo.png"
@@ -182,34 +185,93 @@ export function MayakrishnaLanding() {
                 width={440}
                 height={440}
                 priority
-                className="size-14 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 gap:-2 sm:size-20"
+                className="size-12 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 sm:size-16 lg:size-20"
               />
 
-              <div className="flex flex-col">
-                <span className="truncate font-jakarta text-[clamp(1.15rem,2.8vw,1.45rem)] font-extrabold tracking-[-0.02em] text-navy">
+              <div className="flex min-w-0 flex-col">
+                <span className="truncate font-jakarta text-[0.9rem] font-extrabold tracking-[-0.02em] text-navy min-[400px]:text-base sm:text-xl">
                   Mayakrishna Technologies Pvt Ltd
                 </span>
-                <span className="font-jakarta text-xs sm:text-sm font-bold tracking-wide text-[#2563EB]">
+
+                <span className="hidden font-jakarta text-[10px] font-bold tracking-wide text-[#2563EB] min-[400px]:block sm:text-sm">
                   Automations, built around Tally
                 </span>
               </div>
             </a>
 
-            <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+            {/* DESKTOP NAVIGATION */}
+            <div className="hidden shrink-0 items-center gap-3 md:flex">
               <a
                 href="#about"
-                className="rounded-full px-3.5 py-2 text-xs font-bold text-navy transition-colors hover:bg-navy/5 hover:text-royal sm:px-4 sm:text-sm"
+                className="rounded-full px-4 py-2 text-sm font-bold text-navy transition-colors hover:bg-navy/5 hover:text-royal"
               >
                 About Us
               </a>
+
               <a
                 href="#contact"
-                className="rounded-full bg-navy px-4 py-2 text-xs font-bold text-white shadow-[0_8px_20px_rgba(15,42,92,0.2)] transition-[transform,background] hover:-translate-y-0.5 hover:bg-royal sm:px-5 sm:text-sm"
+                className="rounded-full bg-navy px-5 py-2 text-sm font-bold text-white shadow-[0_8px_20px_rgba(15,42,92,0.2)] transition hover:-translate-y-0.5 hover:bg-royal"
               >
                 Contact Us
               </a>
             </div>
+
+            {/* MOBILE HAMBURGER BUTTON */}
+            <button
+              type="button"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
+              onClick={() => setMobileMenuOpen((current) => !current)}
+              className="flex size-11 shrink-0 flex-col items-center justify-center gap-[5px] rounded-xl border border-navy/10 bg-[#F3F7FD] transition hover:border-royal/30 hover:bg-blue-50 md:hidden"
+            >
+              <span
+                className={`block h-0.5 w-5 rounded-full bg-navy transition duration-300 ${
+                  mobileMenuOpen ? "translate-y-[7px] rotate-45" : ""
+                }`}
+              />
+
+              <span
+                className={`block h-0.5 w-5 rounded-full bg-navy transition duration-300 ${
+                  mobileMenuOpen ? "scale-x-0 opacity-0" : ""
+                }`}
+              />
+
+              <span
+                className={`block h-0.5 w-5 rounded-full bg-navy transition duration-300 ${
+                  mobileMenuOpen ? "-translate-y-[7px] -rotate-45" : ""
+                }`}
+              />
+            </button>
           </nav>
+
+          {/* MOBILE DROPDOWN */}
+          <div
+            id="mobile-navigation"
+            className={`overflow-hidden border-navy/10 bg-white transition-all duration-300 ease-in-out md:hidden ${
+              mobileMenuOpen
+                ? "max-h-52 border-t opacity-100"
+                : "pointer-events-none max-h-0 border-t-0 opacity-0"
+            }`}
+          >
+            <div className="mx-auto grid max-w-[1180px] gap-2 px-4 py-4 sm:px-6">
+              <a
+                href="#about"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex h-12 items-center rounded-xl px-4 text-sm font-bold text-navy transition hover:bg-blue-50 hover:text-royal"
+              >
+                About Us
+              </a>
+
+              <a
+                href="#contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex h-12 items-center justify-center rounded-xl bg-navy px-4 text-sm font-bold text-white shadow-[0_8px_20px_rgba(15,42,92,0.18)] transition hover:bg-royal"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
         </header>
 
         <div id="top" aria-hidden="true" className="scroll-mt-24" />
