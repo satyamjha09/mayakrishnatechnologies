@@ -171,13 +171,13 @@ export function MayakrishnaLanding() {
         }`}
       >
         <header className="reveal-navbar sticky top-0 z-40 border-b border-navy/10 bg-white/95 text-navy shadow-[0_8px_30px_rgba(15,42,92,0.06)] backdrop-blur-xl">
-          <nav className="mx-auto flex h-[76px] max-w-[1180px] items-center justify-between gap-3 px-4 sm:h-[84px] sm:px-6 lg:px-8">
-            {/* LOGO */}
+          <nav className="mx-auto flex min-h-[72px] max-w-[1180px] items-center justify-between gap-2 px-3 py-2 sm:min-h-[84px] sm:px-6 lg:px-8">
+            {/* LOGO AND COMPANY NAME */}
             <a
               href="#top"
               aria-label="Mayakrishna Technologies home"
               onClick={() => setMobileMenuOpen(false)}
-              className="group flex min-w-0 items-center gap-2.5 sm:gap-3.5"
+              className="group flex min-w-0 flex-1 items-center gap-0.5 sm:gap-2"
             >
               <Image
                 src="/mayakrishna-logo.png"
@@ -185,15 +185,15 @@ export function MayakrishnaLanding() {
                 width={440}
                 height={440}
                 priority
-                className="size-12 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 sm:size-16 lg:size-20"
+                className="size-8 shrink-0 object-contain transition-transform duration-300 group-hover:scale-105 min-[400px]:size-9 sm:size-14 lg:size-20"
               />
 
-              <div className="flex min-w-0 flex-col">
-                <span className="truncate font-jakarta text-[0.9rem] font-extrabold tracking-[-0.02em] text-navy min-[400px]:text-base sm:text-xl">
+              <div className="flex min-w-0 flex-1 flex-col">
+                <span className="font-jakarta text-[11px] font-extrabold leading-[1.2] tracking-[-0.025em] text-navy min-[380px]:text-xs min-[480px]:text-sm sm:text-xl">
                   Mayakrishna Technologies Pvt Ltd
                 </span>
 
-                <span className="hidden font-jakarta text-[10px] font-bold tracking-wide text-[#2563EB] min-[400px]:block sm:text-sm">
+                <span className="mt-0.5 block font-jakarta text-[8px] font-bold leading-tight tracking-wide text-[#2563EB] min-[380px]:text-[9px] min-[480px]:text-[10px] sm:text-sm">
                   Automations, built around Tally
                 </span>
               </div>
@@ -210,7 +210,7 @@ export function MayakrishnaLanding() {
 
               <a
                 href="#contact"
-                className="rounded-full bg-navy px-5 py-2 text-sm font-bold text-white shadow-[0_8px_20px_rgba(15,42,92,0.2)] transition hover:-translate-y-0.5 hover:bg-royal"
+                className="rounded-full bg-navy px-5 py-2 text-sm font-bold text-white shadow-[0_8px_20px_rgba(15,42,92,0.2)] transition duration-300 hover:-translate-y-0.5 hover:bg-royal"
               >
                 Contact Us
               </a>
@@ -219,38 +219,40 @@ export function MayakrishnaLanding() {
             {/* MOBILE HAMBURGER BUTTON */}
             <button
               type="button"
-              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-label={
+                mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"
+              }
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation"
               onClick={() => setMobileMenuOpen((current) => !current)}
-              className="flex size-11 shrink-0 flex-col items-center justify-center gap-[5px] rounded-xl border border-navy/10 bg-[#F3F7FD] transition hover:border-royal/30 hover:bg-blue-50 md:hidden"
+              className="flex size-10 shrink-0 flex-col items-center justify-center gap-[5px] rounded-xl border border-navy/10 bg-[#F3F7FD] transition hover:border-royal/30 hover:bg-blue-50 sm:size-11 md:hidden"
             >
               <span
-                className={`block h-0.5 w-5 rounded-full bg-navy transition duration-300 ${
+                className={`block h-0.5 w-5 rounded-full bg-navy transition-all duration-300 ${
                   mobileMenuOpen ? "translate-y-[7px] rotate-45" : ""
                 }`}
               />
 
               <span
-                className={`block h-0.5 w-5 rounded-full bg-navy transition duration-300 ${
+                className={`block h-0.5 w-5 rounded-full bg-navy transition-all duration-300 ${
                   mobileMenuOpen ? "scale-x-0 opacity-0" : ""
                 }`}
               />
 
               <span
-                className={`block h-0.5 w-5 rounded-full bg-navy transition duration-300 ${
+                className={`block h-0.5 w-5 rounded-full bg-navy transition-all duration-300 ${
                   mobileMenuOpen ? "-translate-y-[7px] -rotate-45" : ""
                 }`}
               />
             </button>
           </nav>
 
-          {/* MOBILE DROPDOWN */}
+          {/* MOBILE DROPDOWN MENU */}
           <div
             id="mobile-navigation"
-            className={`overflow-hidden border-navy/10 bg-white transition-all duration-300 ease-in-out md:hidden ${
+            className={`overflow-hidden bg-white transition-all duration-300 ease-in-out md:hidden ${
               mobileMenuOpen
-                ? "max-h-52 border-t opacity-100"
+                ? "max-h-52 border-t border-navy/10 opacity-100"
                 : "pointer-events-none max-h-0 border-t-0 opacity-0"
             }`}
           >
@@ -258,7 +260,7 @@ export function MayakrishnaLanding() {
               <a
                 href="#about"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex h-12 items-center rounded-xl px-4 text-sm font-bold text-navy transition hover:bg-blue-50 hover:text-royal"
+                className="flex h-12 items-center rounded-xl px-4 text-sm font-bold text-navy transition-colors hover:bg-blue-50 hover:text-royal"
               >
                 About Us
               </a>
@@ -266,7 +268,7 @@ export function MayakrishnaLanding() {
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex h-12 items-center justify-center rounded-xl bg-navy px-4 text-sm font-bold text-white shadow-[0_8px_20px_rgba(15,42,92,0.18)] transition hover:bg-royal"
+                className="flex h-12 items-center justify-center rounded-xl bg-navy px-4 text-sm font-bold text-white shadow-[0_8px_20px_rgba(15,42,92,0.18)] transition-colors hover:bg-royal"
               >
                 Contact Us
               </a>
