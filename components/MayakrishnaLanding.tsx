@@ -10,7 +10,7 @@ const products = [
     domain: "anywheretally.com",
     href: "https://anywheretally.com",
     description:
-      "Tally on Cloud run TallyPrime from anywhere, anytime, on any device. Secure hosting, daily backups and 24×7 access for your whole team.",
+      "Your Tally in your pocket, 24×7. Access live business information, post data in real time and manage everyday Tally work from your mobile wherever you are.",
     logo: "/anywhere-tally-logo.png",
     artwork: "/anywhere-tally-artwork.svg",
   },
@@ -19,7 +19,7 @@ const products = [
     domain: "tallykonnect.com",
     href: "https://tallykonnect.com",
     description:
-      "Power up your Tally connectivity link branches, remote teams and data so everyone works on one Tally, in real time, from wherever they are.",
+      "Automate GST, purchases, TDS, bank reconciliation and reporting with smart tools built to work seamlessly with Tally.",
     logo: "/tally-konnect-logo.png",
     artwork: "/tally-konnect-artwork.svg",
   },
@@ -268,7 +268,7 @@ export function MayakrishnaLanding() {
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex h-12 items-center justify-center rounded-xl bg-navy px-4 text-sm font-bold text-white shadow-[0_8px_20px_rgba(15,42,92,0.18)] transition-colors hover:bg-royal"
+                className="flex h-12 items-center rounded-xl px-4 text-sm font-bold text-navy transition-colors hover:bg-blue-50 hover:text-royal"
               >
                 Contact Us
               </a>
@@ -283,9 +283,8 @@ export function MayakrishnaLanding() {
             <h1 className="reveal-section-label text-xs font-extrabold uppercase tracking-[0.24em] text-royal">
               Our products
             </h1>
-            <p className="reveal-section-copy mt-3 max-w-xl text-base font-medium leading-6 text-[#2C3E50] sm:text-lg">
-              Explore the Mayakrishna ecosystem for Tally, AI and customer
-              communication.
+            <p className="reveal-section-copy mt-3 max-w-none text-base font-medium leading-6 text-[#2C3E50] sm:whitespace-nowrap sm:text-lg">
+              Everything you need to simplify accounting, workflows and customer communication
             </p>
           </div>
 
@@ -396,7 +395,7 @@ export function MayakrishnaLanding() {
                 ABOUT MAYAKRISHNA
               </p>
               <h2 className="mt-3 max-w-2xl font-jakarta text-[clamp(1.9rem,4vw,3rem)] font-extrabold leading-[1.12] tracking-[-0.035em] text-navy">
-                Making everyday business easier with Tally and automation.
+                Making everyday business easier with Tally automations.
               </h2>
 
               <div className="mt-6 space-y-4 text-base leading-7 text-[#3A4D6F]">
@@ -416,7 +415,7 @@ export function MayakrishnaLanding() {
                 <span className="flex size-16 shrink-0 items-center justify-center overflow-visible">
                   <Image
                     src="/logo2.png"
-                    alt="Simpler Tally operations"
+                    alt="Run Tally Anywhere"
                     width={64}
                     height={64}
                     className="h-full w-full scale-[1.7] object-contain"
@@ -424,7 +423,7 @@ export function MayakrishnaLanding() {
                 </span>
 
                 <h3 className="font-jakarta text-lg font-extrabold text-white">
-                  Simpler Tally operations
+                  Run Tally Anywhere
                 </h3>
               </div>
 
@@ -464,6 +463,16 @@ export function MayakrishnaLanding() {
             id="contact"
             className="contact-section-bg scroll-mt-24 px-4 py-10 sm:px-6 lg:py-12"
           >
+             <div className="mx-auto mb-8 max-w-[720px] px-2 text-center sm:mb-10">
+              <h2 className="font-jakarta text-[clamp(1.9rem,5vw,3rem)] font-extrabold leading-[1.1] tracking-[-0.04em] text-navy">
+                Talk to our team.
+              </h2>
+
+              <p className="mx-auto mt-4 max-w-[650px] text-sm leading-6 text-[#4A5A78] sm:text-base sm:leading-7">
+                Have questions or want to see the product in action? Fill in your details
+                and someone from our team will get back to you within a few hours.
+              </p>
+            </div>
             <div className="mx-auto grid max-w-[1080px] overflow-hidden rounded-[24px] border border-[#D7E3F4] bg-white shadow-[0_20px_55px_rgba(15,42,92,0.12)] lg:grid-cols-[1.35fr_0.9fr]">
               {/* LEFT SIDE — CONTACT FORM */}
               <form
