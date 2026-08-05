@@ -19,15 +19,15 @@
 }
 
 html {
-  background: var(--ink);
+  background: #e9f2fd;
 }
 
 body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
-  background: var(--ink);
-  color: #eaf1fb;
+  background: #e9f2fd;
+  color: #0f2a5c;
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
@@ -36,9 +36,41 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+@keyframes powerFlow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes powerShine {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+
+  100% {
+    transform: translateX(650%) skewX(-20deg);
+  }
+}
+
 /* ============================================================
    INTRO OVERLAY
    ============================================================ */
+
+   @keyframes powerShine {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+
+  100% {
+    transform: translateX(650%) skewX(-20deg);
+  }
+}
+
 
 #intro {
   --tex: rgba(15, 42, 92, 0.16);
@@ -754,15 +786,15 @@ a {
   background:
     radial-gradient(
       1100px 600px at 78% -10%,
-      rgba(21, 87, 176, 0.38),
+      rgba(62, 142, 222, 0.22),
       transparent 60%
     ),
     radial-gradient(
       900px 520px at 8% 110%,
-      rgba(245, 166, 35, 0.12),
+      rgba(245, 166, 35, 0.14),
       transparent 60%
     ),
-    var(--ink);
+    #e9f2fd;
 }
 
 @media (max-width: 480px) {
@@ -852,15 +884,15 @@ html {
   background:
     radial-gradient(
       760px 460px at 10% 15%,
-      rgba(62, 142, 222, 0.23),
+      rgba(62, 142, 222, 0.25),
       transparent 62%
     ),
     radial-gradient(
       700px 420px at 95% 85%,
-      rgba(245, 166, 35, 0.12),
+      rgba(245, 166, 35, 0.15),
       transparent 64%
     ),
-    var(--ink);
+    #e1edf9;
 }
 
 @media (prefers-reduced-motion: reduce) {
